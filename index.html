@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .light{
+        margin-top: 6%;
+        box-shadow: 0px 0px 700px 7px white;
+        animation: slidein 10s linear infinite;
+        border-radius: 100%;
+    }
+
+    .border{
+        pointer-events: none;
+        overflow: hidden;
+        width: 450px;
+        height: 450px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        border: 10px solid rgb(255, 255, 255);
+        box-shadow: 0px 0px 50px 5px white;
+    }
+
+
+    @keyframes slidein {
+        from {
+            transform: rotate(0deg)
+        }
+        75% {
+            box-shadow: 0px 0px 120px 5px white;
+        }
+        to {
+            transform: rotate(360deg)
+    }
+    }
+    /* @keyframes slidein {
+        0% {transform: rotate(0deg);}
+        50% {transform: rotate(180deg);}
+        100% {transform: rotate(360deg);}
+    } */
+
+
+</style>
+<body>
+    <div class="light">
+        <div class="border">
+            <img src="fareza.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
