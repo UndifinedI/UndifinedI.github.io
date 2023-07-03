@@ -50,6 +50,27 @@
         100% {transform: rotate(360deg);}
     } */
 
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+    .time {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: white;
+    }
+    .buttons {
+        margin-top: 20px;
+    }
+    .button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
 
 </style>
 <body>
@@ -58,5 +79,67 @@
             <img src="fareza.png" alt="">
         </div>
     </div>
+
+    <div class="container">
+        <div class="time">00:00:00</div>
+        <div class="buttons">
+          <button class="button" onclick="start()">Start</button>
+          <button class="button" onclick="stop()">Stop</button>
+          <button class="button" onclick="reset()">Reset</button>
+        </div>
+      </div>
+  
+      <script>
+        let timerInterval;
+        let milliseconds = 0;
+        let seconds = 0;
+        let minutes = 0;
+  
+        function start() {
+          clearInterval(timerInterval);
+          timerInterval = setInterval(updateTime, 10);
+        }
+  
+        function stop() {
+          clearInterval(timerInterval);
+        }
+  
+        function reset() {
+          clearInterval(timerInterval);
+          milliseconds = 0;
+          seconds = 0;
+          minutes = 0;
+          updateTime();
+        }
+  
+        function updateTime() {
+          milliseconds += 10;
+          if (milliseconds === 1000) {
+            milliseconds = 0;
+            seconds++;
+          }
+          if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+          }
+          const formattedTime = formatTime(minutes, seconds, milliseconds);
+          document.querySelector(".time").textContent = formattedTime;
+        }
+  
+        function formatTime(minutes, seconds, milliseconds) {
+          return (
+            padTime(minutes) +
+            ":" +
+            padTime(seconds) +
+            ":" +
+            padTime(Math.floor(milliseconds / 10))
+          );
+        }
+  
+        function padTime(time) {
+          return time.toString().padStart(2, "0");
+        }
+      </script>
+
 </body>
 </html>
