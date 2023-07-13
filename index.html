@@ -7,24 +7,21 @@
 </head>
 <style>
     body{
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        
+      background-color: black;
     }
 
     .light{
         margin-top: 6%;
         box-shadow: 0px 0px 700px 7px white;
-        animation: slidein 10s linear infinite;
+        animation: slidein 2s linear infinite;
         border-radius: 100%;
     }
 
     .border{
         pointer-events: none;
         overflow: hidden;
-        width: 450px;
-        height: 450px;
+        width: 90px;
+        height: 90px;
         border-radius: 100%;
         display: flex;
         justify-content: center;
@@ -35,12 +32,20 @@
 
     @keyframes slidein {
         from {
-            transform: rotate(0deg)
+            transform: rotate(0deg);
+            box-shadow: 0px 0px 120px 5px rgb(255, 4, 4);
+        }
+        25%{
+          box-shadow: 0px 0px 50px 5px rgb(0, 219, 33);
+        }
+        50%{
+          box-shadow: 0px 0px 120px 5px rgb(255, 251, 0);
         }
         75% {
-            box-shadow: 0px 0px 120px 5px white;
+            box-shadow: 0px 0px 50px 5px rgb(43, 0, 255);
         }
         to {
+          box-shadow: 0px 0px 120px 5px rgb(157, 0, 255);
             transform: rotate(360deg)
     }
     }
@@ -50,9 +55,10 @@
         100% {transform: rotate(360deg);}
     } */
 
-    body {
+    .body {
         text-align: center;
         font-family: Arial, sans-serif;
+        display: none;
     }
     .container {
         margin-top: 100px;
@@ -72,13 +78,255 @@
         font-size: 20px;
     }
 
+ 
+    .kesimpulan{
+      padding-top: 20px;
+        display: none;
+        justify-content: center;
+        height: 100vh;
+        /* position: relative; */
+
+    }
+
+    .bk{
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      overflow: hidden;
+      animation: sli 2s linear infinite;
+    }
+
+    @keyframes sli {
+        from {
+            transform: rotate(0deg);
+            box-shadow: 0px 0px 50px 5px rgb(0, 219, 33);
+          }
+          25%{
+            box-shadow: 0px 0px 120px 5px rgb(255, 4, 4);
+        }
+        50%{
+          box-shadow: 0px 0px 50px 5px rgb(43, 0, 255);
+        }
+        75% {
+          box-shadow: 0px 0px 120px 5px rgb(157, 0, 255);
+        }
+        to {
+          box-shadow: 0px 0px 120px 5px rgb(255, 251, 0);
+            transform: rotate(360deg)
+    }
+    }
+
+    .bk img {
+      height: 100%;
+    }
+    
+    .tahik{
+      z-index: 2;
+    }
+
+    .kon {
+      position: absolute;
+      top: 320px;
+      display: none;
+    }
+    .kon1 {
+      position: absolute;
+      top: 220px;
+      display: none;
+    }
+
+    #canvas {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#canvas {
+      border: 1px solid black;
+    }
+
+
+    .kentut{
+      box-shadow: inset 0px 0px 500px 10px white;
+    }
+
+    @keyframes i {
+        from {
+            /* transform: rotate(0deg); */
+            box-shadow: inset 0px 0px 200px 5px rgb(0, 219, 33);
+          }
+          25%{
+            box-shadow: inset 0px 0px 120px 5px rgb(255, 4, 4);
+        }
+        50%{
+          box-shadow: inset 0px 0px 200px 5px rgb(43, 0, 255);
+        }
+        75% {
+          box-shadow: inset 0px 0px 120px 5px rgb(157, 0, 255);
+        }
+        to {
+          box-shadow: inset 0px 0px 220px 5px rgb(255, 251, 0);
+            /* transform: rotate(360deg) */
+    }
+    }
 </style>
-<body>
-    <div class="light">
+
+<body class="kentut">
+<div id="canvas" style="height: 100vh; position: absolute; z-index: 100;"></div>
+  <button class="click" style="position: absolute; z-index: 101; right: 140px;">Click!</button>
+
+  <div class="kesimpulan">
+
+    <div class="bk">
+      <img src="fareza.png" alt="">
+    </div>
+
+
+
+    <div class="tahik">
+      <div class="light">
+          <div class="border">
+              <img src="fareza.png" alt="">
+          </div>
+      </div>
+      
+      <div class="light">
         <div class="border">
             <img src="fareza.png" alt="">
         </div>
     </div>
+  
+    <div class="light">
+      <div class="border">
+          <img src="fareza.png" alt="">
+      </div>
+  </div>
+  
+  <div class="light">
+    <div class="border">
+        <img src="fareza.png" alt="">
+    </div>
+  </div>
+  
+    </div>
+  </div>
+
+
+  <style>
+    .cat{
+      position: absolute;
+      top: 40px;
+      right: 1100px;
+      display: none;
+    }
+
+    @media only screen and (max-width: 578px) {
+      .cat {
+        position: absolute;
+        top: 0px;
+        left: 0;
+      }
+    }
+  </style>
+
+  <audio class="cok" src="a.mp3" loop="loop" autoplay="autoplay" ></audio>
+  <video class="kon" width="420" height="340" autoplay loop muted>
+    <source src="y2mate.com - Cat Dancing with music Green Screen 1080p Meme Template catmeme shorts_480p.mp4" type="video/mp4">
+  </video>
+  <video class="tol" width="420" height="340" autoplay loop muted style="position: absolute; top: 0; right: 0;">
+    <source src="y2mate.com - Bully Maguire Dance Spiderman Green Screen_360p.mp4" type="video/mp4">
+  </video>
+  <video class="ck" width="420" height="340" autoplay loop muted style="position: absolute; top: 110px; right: 0; display: none">
+    <source  src="y2mate.com - Rick Astley  Never Gonna Give You Up Official Music Video_v144P.mp4" type="video/mp4">
+  </video>
+  <video class="cat" width="240" height="160" autoplay loop muted>
+    <source  src="y2mate.com - Cat dancing meme_v144P.mp4" type="video/mp4">
+  </video>
+
+  <script>
+    document.querySelector('.click').addEventListener("click", () => {
+      document.querySelector('.click').style.display = "none"
+      document.querySelector('.kesimpulan').style.display = "flex"
+      document.querySelector('.kon').style.display = "inline"
+      document.querySelector('.cok').play()
+      document.querySelector('.tol').style.display = "none"
+      document.querySelector('.ck').style.display = "inline"
+      document.querySelector('.cat').style.display = "inline"
+
+      document.querySelector('.kentut').style.animation = "i 3s linear infinite"
+      document.querySelector('.ck').style.animation = "sli 3s linear infinite"
+
+
+    })
+
+    let canvas = document.getElementById('canvas');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let isDrawing = false;
+
+    function draw(event) {
+      if (!isDrawing) return;
+
+      let dot = document.createElement('div');
+      dot.className = 'dot';
+      dot.style.left = (event.clientX - 4) + 'px';
+      dot.style.top = (event.clientY - 4) + 'px';
+      canvas.appendChild(dot);
+
+      // Menghapus goresan setelah 2 detik
+      setTimeout(function() {
+        dot.remove();
+      }, 600);
+    }
+
+    canvas.addEventListener('mouseenter', function(event) {
+      isDrawing = true;
+      draw(event);
+    });
+
+    canvas.addEventListener('mousemove', draw);
+
+    canvas.addEventListener('mouseleave', function() {
+      isDrawing = false;
+    });
+
+  </script>
+
+<style>
+
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    animation: si 2s linear infinite;
+  }
+
+  @keyframes si {
+        from {
+            /* transform: rotate(0deg); */
+            box-shadow: 0px 0px 50px 5px rgb(0, 219, 33);
+          }
+         
+      
+        to {
+          box-shadow: 0px 0px 120px 5px rgb(255, 251, 0);
+            /* transform: rotate(360deg) */
+    }
+    }
+</style>
+
 
     <div class="container">
         <div class="time">00:00:00</div>
