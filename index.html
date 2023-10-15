@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap" rel="stylesheet">
 
     <style> 
-    *{
+        *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -242,7 +242,7 @@ nav {
 }
 
 
-.kartu-misi:hover{
+.kartu-misi:hover, .kartu-misi:active{
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.033);
     margin-top: 0px;
     transition: 0.4s;
@@ -278,6 +278,7 @@ footer p {
     }
     .welcome-box {
         padding: 25px 58px 58px 58px;
+        width: 100%;
     }
 
     .welcome-box span {
@@ -371,6 +372,16 @@ footer p {
         height: 100%;
     }
 
+}
+
+@media only screen and (max-width: 564px) {
+    body {
+        background-color: rgba(33, 37, 41, 0.985);
+    }
+
+    .join-other {
+        margin-bottom: 0;
+    }
 }
     
     </style>
