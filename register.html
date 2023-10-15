@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="devil-logo.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <style>
+
+      *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgba(255, 255, 255, 0.632);
+    background-color: rgb(33, 37, 41);
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    margin: 50px auto;
+    /* background-color: blue;  */
+    width: 1200px;
+    height: 600px;
+    display: flex;
+}
+
+.icon {
+    /* background-color: rgba(255, 255, 0, 0.258); */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    /* background-color: rgba(0, 255, 0, 0.543); */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    /* width: 100%; */
+    /* height: 80%; */
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .text {
+    padding: 10px;
+    font-size: 19px;
+    border-radius: 5px;
+    background-color: rgb(47, 47, 65);
+    border: none;
+    width: 300px;
+    height: 38px;
+    margin-bottom: 10px;
+}
+
+.keep-login{
+    display: flex;
+    width: 100%;
+    padding: 10px 0 0 10px;
+}
+
+.login {
+    margin-top: 60px;
+    background-color: rgb(118, 53, 162);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 7px;
+}
+
+#remember {
+    margin-right: 2px;
+}
+
+.icon-box{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon p {
+    font-size: 20px;
+}
+
+
+
+.login-form{
+    background-color: yellow;
+}
+
+.devil-hunter-awokawok {
+    color: rgb(118, 53, 162);
+    display: flex;
+    align-items: center;
+    font-size: 37px;
+    margin-bottom: 8px;
+    justify-content: center;
+}
+
+.devil-hunter-awokawok img {
+    margin-right: 2px;
+}
+
+.devil-hunter-awokawok h2 {
+    font-size: 37px;
+    letter-spacing: 5px;
+    color: rgb(140, 65, 190);
+}
+
+.date {
+    /* background-color: rebeccapurple; */
+    width: 300px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date select {
+    background-color: rgb(47, 47, 65);
+    width: 93px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.gender {
+    margin-top: 5px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gender div {
+    padding: 10px;
+    background-color: rgb(47, 47, 65);
+    /* width: 93px; */
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+.gender div label {
+    margin-right: 15px;
+}
+
+
+form .p {
+    font-size: 13px;
+    /* background-color: red; */
+    width: 300px;
+    padding: 5px 5px 0 5px;
+}
+
+form .span {
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 10px;
+    width: 300px;
+    /* background-color: rgba(255, 255, 0, 0.372); */
+    display: flex;
+}
+
+
+@media only screen and (max-width: 1254px) {
+    .container {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    form .span {
+        width: 290px;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="icon">
+            <div class="devil-hunter-awokawok">
+                <img src="devil-logo.png" width="60">
+                Devil
+                <h2>Hunter</h2>
+            </div>
+        </div>
+        <div class="form">
+            <form action="">
+                <input type="text" class="text" placeholder="Username">
+                <input type="password" class="text" placeholder="Password">
+                <input type="password" class="text" placeholder="Confirm password">
+                <p class="p">Birth</p>
+                <div class="date">
+                    <select id="day" name="day">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select id="month" name="month">
+                        <option value="1" selected>Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                    <select id="year" name="year">
+                        <option value="none" selected>2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+
+                <p class="p">Gender</p>
+                <div class="gender">
+                    <div class="malle">
+                        <label for="male">Male</label>
+                        <input type="radio" name="kelamin" id="male">
+                    </div>
+
+                    <div class="femalle">
+                        <label for="female">Female</label>
+                        <input type="radio" name="kelamin" id="female">
+                    </div>
+
+                    <div class="othher">
+                        <label for="karbu">Karbu</label>
+                        <input type="radio" name="kelamin" id="karbu">
+                    </div>
+
+                </div>
+                
+                <p class="span">Dengan mengklik Daftar, Anda menyetujui Ketentuan, Kebijakan Privasi, dan Kebijakan Cookie kami.</p class="span">
+                <button type="submit" class="login">
+                    <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="m31.71 15.29-10-10-1.42 1.42 8.3 8.29H0v2h28.59l-8.29 8.29 1.41 1.41 10-10a1 1 0 0 0 0-1.41z" data-name="3-Arrow Right"/></svg>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
